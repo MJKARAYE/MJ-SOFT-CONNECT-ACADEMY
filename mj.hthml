@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mj Soft-Connect Academy</title>
+
+<link rel="stylesheet" href="mj.css">
+
+</head>
+<body>
+
+
+  <!-- logo, website title and navigation buttons-->
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <img style="height:70px; width:70px; border-radius: 20px;" src="Mj.jpg" alt="logo">  MJ SOFT-CONNECT Academy</div>
+    <button class="burger" id="burgerBtn" aria-label="Menu">&#9776;</button>
+    <nav class="links" id="navLinks">
+      <button data-page="home" class="current">Home</button>
+      <button data-page="dashboard">Student Dashboard</button>
+      <button data-page="courses">Courses</button>
+      <span class="sep"></span>
+      <button data-page="about">About Us</button>
+      <button data-page="contact">Contact Us</button>
+      <span class="sep"></span>
+      <button data-page="register">Register</button>
+      <button class="nav-cta" data-page="login">Log In</button>
+    </nav>
+  </div>
+</header>
+
+
+
+<!-- HOME PA""GE -->
+
+
+
+<section class="page active" id="page-home">
+  <div class="home">
+    <div class="wrap home-grid">
+      <div>
+        
+        <h1>Welcome to <em>MJ SOFT-CONNECT Academy</em></h1>
+        <p class="mission">Our mission is to provide quality online education that helps students develop practical skills for the modern digital world &mdash; courses built for beginners and advanced learners alike.</p>
+        
+     <div class="home-actions">
+  <button class="btn btn-primary" data-page="register">Start Studying Now &rarr;</button>
+  <button class="btn courses-btn" data-page="courses">View Courses</button>
+</div>
+</div>
+      <div class="terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <div class="terminal-body">
+          <div>$ enroll --student=you</div>
+          <div class="out">&gt; checking eligibility... done</div>
+          <div class="out">&gt; modules unlocked: 6</div>
+          <div>$ start_course web-development</div>
+          <div class="out">&gt; progress: 0% &rarr; building...<span class="caret"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why choose us</span>
+        <h2>Everything you need to learn well</h2>
+        <p>A learning path designed around real outcomes, not just lessons.</p>
+      </div>
+      <div class="grid-4">
+        <div class="feature"><span class="num">01</span>Flexible online learning</div>
+        <div class="feature"><span class="num">02</span>Expert instructors</div>
+        <div class="feature"><span class="num">03</span>Practical projects</div>
+        <div class="feature"><span class="num">04</span>Student support</div>
+        <div class="feature"><span class="num">05</span>Career-focused courses</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Curriculum</span>
+        <h2>Available courses</h2>
+        <p>Eight tracks, each one a step toward a digital career.</p>
+      </div>
+      <div class="track-wrap">
+        <div class="track-line"></div>
+        <div class="track-row">
+          <div class="course-card"><div class="node">01</div><h3>Programming Languages</h3><p class="desc">Fundamentals, problem-solving, software creation.</p></div>
+          <div class="course-card"><div class="node">02</div><h3>Web Development</h3><p class="desc">HTML, CSS, JavaScript, backend & databases.</p></div>
+          <div class="course-card"><div class="node">03</div><h3>Software Development</h3><p class="desc">Engineering principles & application building.</p></div>
+          <div class="course-card"><div class="node">04</div><h3>Graphic Design</h3><p class="desc">Visual communication & digital design.</p></div>
+        </div>
+        <div class="track-row" style="margin-top:20px;">
+          <div class="course-card"><div class="node">05</div><h3>Cybersecurity</h3><p class="desc">Protecting systems, networks & data.</p></div>
+          <div class="course-card"><div class="node">06</div><h3>Database Management</h3><p class="desc">Designing & maintaining structured data.</p></div>
+          <div class="course-card"><div class="node">07</div><h3>Mobile App Development</h3><p class="desc">Building apps for Android & iOS.</p></div>
+          <div class="course-card"><div class="node">08</div><h3>Artificial Intelligence</h3><p class="desc">Machine learning & intelligent systems.</p></div>
+        </div>
+      </div>
+      <div class="get-started">
+        <h3>Ready to begin your journey?</h3>
+        <button class="btn btn-primary" data-p""age="register">Start Studying Now &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGIN PAGE -->
+
+<section class="page" id="page-login">
+  <div class="wrap" style="max-width:480px;padding:64px 24px 80px;">
+    <div class="card">
+      <h2>Student Login</h2>
+      <p class="sub">Welcome back — pick up where you left off.</p>
+      <div id="loginForm">
+        <div class="field"><label for="loginEmail">Email Address</label><input type="email" id="loginEmail"></div>
+        <div class="field"><label for="loginPassword">Password</label><input type="password" id="loginPassword"></div>
+        <button type="button" id="loginSubmitBtn" class="btn btn-primary btn-block">Log In</button>
+        <p class="form-msg" id="loginMsg"></p>
+      </div>
+      <p style="text-align:center;margin-top:18px;font-size:14px;color:var(--text-dim);">
+        New here? <a href="#" data-page="register" style="color:var(--accent);font-weight:600;">Create an account</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- REGISTER PAGE  -->
+
+<section class="page" id="page-register">
+  <div class="wrap" style="max-width:560px;padding:64px 24px 80px;">
+    <div class="card">
+      <h2>New Student Registration</h2>
+      <p class="sub">Create your account to start learning.</p>
+      <div id="registerForm">
+        <div class="field"><label for="regName">Full Name</label><input type="text" id="regName"></div>
+        <div class="field-row">
+          <div class="field"><label for="regDob">Date of Birth</label><input type="date" id="regDob"></div>
+          <div class="field"><label for="regGender">Gender</label>
+            <select id="regGender">
+              <option value="">Select</option>
+              <option>Male</option><option>Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="regPhone">Phone Number</label><input type="tel" id="regPhone"></div>
+          <div class="field"><label for="regEmail">Email Address</label><input type="email" id="regEmail"></div>
+        </div>
+        <div class="field"><label for="regAddress">Residential Address</label><input type="text" id="regAddress"></div>
+        <div class="field"><label for="regCourse">Course to Study</label>
+          <select id="regCourse">
+            <option value="">Select a course</option>
+            <option>Programming Languages</option>
+            <option>Web Development</option>
+            <option>Software Development</option>
+            <option>Graphic Design</option>
+            <option>Cybersecurity</option>
+            <option>Database Management</option>
+            <option>Mobile App Development</option>
+            <option>Artificial Intelligence</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="regPassword">Password</label><input type="password" id="regPassword"></div>
+          <div class="field"><label for="regConfirm">Confirm Password</label><input type="password" id=="regConfirm"></div>
+        </div>
+        <button type="button" id="registerSubmitBtn" class="btn btn-primary btn-block">Register</button>
+        <p class="form-msg" id="regMsg"></p>
+      </div>
+      <p style="text-align:center;margin-top:18px;font-size:14px;color:var(--text-dim);">
+        Already have an account? <a href="#" data-page="login" style="color:var(--accent);font-weight:600;">Log in</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!--  COURSES PAGE  -->
+
+<section class="page" id="page-courses">
+  <div class="wrap" style="padding-top:56px;">
+    <div class="section-head">
+      <span class="eyebrow">Curriculum</span>
+      <h2>Explore our courses</h2>
+      <p>Every track below is built for real-world skills and career outcomes.</p>
+    </div>
+  </div>
+  <!--define everything in js -->
+  <div class="wrap" id="courseDetailList" style="padding-bottom:60px;"></div>
+</section>
+
+
+<!--  DASHBOARD PAGE  -->
+<section class="page" id="page-dashboard">
+  <div class="wrap">
+    <div id="dashLoggedOut" class="empty-state" style="margin-top:60px;">
+      <h3 style="margin-bottom:10px;">You're not logged in yet</h3>
+      <p style="margin-bottom:18px;">Log in or register to see your courses, progress and certificates.</p>
+      <button class="btn btn-primary" data-page="login">Go to Login</button>
+    </div>
+
+    <div id="dashLoggedIn" class="hide">
+      <div class="dash-head">
+        <div>
+          <span class="eyebrow" id="dashGreeting">Welcome,</span>
+          <h1>Welcome, <span id="dashName" class="text-accent">Student</span></h1>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span class="role" id="dashEmail"></span>
+          <button class="btn btn-ghost" id="logoutBtn">Log Out</button>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div>
+          <div class="card" style="margin-bottom:24px;">
+            <h3 style="font-size:17px;margin-bottom:16px;">Profile Information</h3>
+            <div class="profile-grid">
+              <div><span class="ic">Email</span><p id="dashEmail2"></p></div>
+              <div><span class="ic">Phone</span><p id="dashPhone"></p></div>
+              <div><span class="ic">Address</span><p id="dashAddress"></p></div>
+              <div><span class="ic">Joined</span><p id="dashJoined"></p></div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:0;overflow:hidden;">
+            <div style="padding:22px 22px 0;"><h3 style="font-size:17px;">My Registered Courses</h3></div>
+            <table>
+              <thead><tr><th>Course</th><th>Progress</th><th>Status</th></tr></thead>
+              <tbody id="dashCourseRows"></tbody>
+            </table>
+            <p id="dashCoursesEmpty" class="empty-state hide" style="margin:22px;">No course registered yet.</p>
+          </div>
+        </div>
+        <div>
+          <div class="side-card">
+            <h4>Dashboard Features</h4>
+            <div class="feat-list">
+              <button data-page="courses">View Registered Courses</button>
+              <button id="featProgress">Course Progress</button>
+              <button id="featMaterials">Learning Materials</button>
+              <button id="featCerts">Certificates</button>
+              <button id="featProfile">Profile Settings</button>
+              <button id="featNotif">Notifications</button>
+            </div>
+          </div>
+          <div class="side-card" id="notifBox">
+            <h4>Notifications</h4>
+            <p style="font-size:13.5px;color:var(--text-dim);">No new notifications. Keep learning!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section
+<!-- ABOUT PAGE  -->
+
+<section class="page" id="page-about">
+  <div class="wrap" style="padding:64px 0 80px;">
+    <span class="eyebrow">About Us</span>
+    <h2 style="font-size:30px;margin:10px 0 18px;">About Our School</h2>
+    <p style="color:var(--text-dim);max-width:640px;font-size:15.5px;">MJ SOFT-CONNECT Academy is an online educational platform dedicated to providing affordable and accessible technology education. We help students gain practical skills in programming, web development, software engineering, graphic design, cybersecurity, and other digital fields.</p>
+    <div class="about-grid">
+      <div class="about-card"><h3>Our Vision</h3><p>To become a leading online learning platform for technology education.</p></div>
+      <div class="about-card"><h3>Our Mission</h3><p>To empower learners with industry-relevant skills that create career opportunities and innovation.</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT PAGE  -->
+
+
+<section class="page" id="page-contact">
+  <div class="wrap contact-grid">
+    <div class="card">
+      <h2>Contact Form</h2>
+      <p class="sub">We'd love to hear from you.</p>
+      <div id="contactForm">
+        <div class="field"><label for="cFullName">Full Name</label><input type="text" id="cFullName"></div>
+        <div class="field"><label for="cEmail">Email Address</label><input type="email" id="cEmail"></div>
+        <div class="field"><label for="cSubject">Subject</label><input type="text" id="cSubject"></div>
+        <div class="field"><label for="cMessage">Message</label><textarea id="cMessage"></textarea></div>
+        <button type="button" id="contactSubmitBtn" class="btn btn-primary btn-block">Send</button>
+        <p class="form-msg" id="contactMsg"></p>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h2>Contact Information</h2>
+        <div style="margin-top:18px;">
+          <div class="info-row"><span class="ic">@</span><div><p>mujahidauwalkaraye@gmail.com</p><span>Email</span></div></div>
+          <div class="info-row"><span class="ic">#</span><div><p>+234 9161500487</p><span>Phone</span></div></div>
+          <div class="info-row"><span class="ic">&gt;</span><div><p>Kano State, Nigeria</p><span>Address</span></div></div>
+        </div>
+        <h4 style="font-family:var(--mono);font-size:12px;color:var(--text-dim);text-transform:uppercase;margin-top:10px;">Social Media</h4>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=100090633200374" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+          <a href="#" aria-label="LinkedIn">IN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>&copy; 2026 MJ SOFT-CONNECT" Academy &mdash; Karaye Kano State, Nigeria</footer>
+
+<script src="mj.js">
+
+</script>
+</body>
+</html>
