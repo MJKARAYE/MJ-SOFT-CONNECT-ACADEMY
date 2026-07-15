@@ -21,21 +21,24 @@
     <button class="burger" id="burgerBtn" aria-label="Menu">&#9776;</button>
     <nav class="links" id="navLinks">
       <button data-page="home" class="current">Home</button>
-      <button data-page="dashboard">Student Dashboard</button>
+     
       <button data-page="courses">Courses</button>
       <span class="sep"></span>
+<button data-page="forex">Forex Trading</button>
       <button data-page="about">About Us</button>
       <button data-page="contact">Contact Us</button>
       <span class="sep"></span>
       <button data-page="register">Register</button>
       <button class="nav-cta" data-page="login">Log In</button>
+      <button data-page="dashboard">Student Dashboard</button>
+<button data-page="certificate">Certificate</button>
     </nav>
   </div>
 </header>
 
 
 
-<!-- HOME PA""GE -->
+<!-- HOME PAGE -->
 
 
 
@@ -53,14 +56,6 @@
 </div>
 </div>
       <div class="terminal">
-        <div class="terminal-bar"><span></span><span></span><span></span></div>
-        <div class="terminal-body">
-          <div>$ enroll --student=you</div>
-          <div class="out">&gt; checking eligibility... done</div>
-          <div class="out">&gt; modules unlocked: 6</div>
-          <div>$ start_course web-development</div>
-          <div class="out">&gt; progress: 0% &rarr; building...<span class="caret"></span></div>
-        </div>
       </div>
     </div>
   </div>
@@ -111,6 +106,96 @@
     </div>
   </div>
 </section>
+<!-- FOREX COURSE PAGE -->
+
+<section class="page" id="page-forex">
+  <div class="wrap" style="padding:56px 0 80px;">
+
+    <div class="section-head">
+      <span class="eyebrow">Professional Trading Course</span>
+      <h2>Forex Trading Masterclass</h2>
+      <p>
+        Learn Forex trading from beginner to advanced level through
+        videos, audio lessons, downloadable notes, practical examples,
+        and quizzes.
+      </p>
+    </div>
+
+    <!-- Course Overview -->
+
+    <div class="card" style="margin-bottom:30px;">
+      <h3>Course Overview</h3>
+
+      <p style="margin:15px 0;color:var(--text-dim);line-height:1.8;">
+        This course teaches you everything you need to become a successful
+        Forex trader. From understanding the market to mastering technical
+        and fundamental analysis, risk management, trading psychology,
+        and building your own profitable strategy.
+      </p>
+
+     
+    </div>
+
+    <!-- Lesson Player -->
+
+    <div class="card">
+
+      <h3 id="lessonTitle">
+        Lesson 1 - Introduction to Forex Trading
+      </h3>
+
+      <p id="lessonDescription" class="sub">
+        Learn what Forex is, how currencies are traded,
+        and who participates in the market.
+      </p>
+
+      <br>
+
+      <!-- Video -->
+
+      <video
+        id="lessonVideo"
+        controls
+        width="100%"
+        style="border-radius:12px; margin-bottom:25px;">
+
+        <source src="/mj soft-connect/The_Best_setup_on_Gold_-_how_I_spot_it_and_why_it_works..(360p).mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+
+      </video>
+
+      <!-- Audio -->
+
+      <h4>🎧 Audio Lesson</h4>
+
+      <audio
+        id="lessonAudio"
+        controls
+        style="width:100%; margin:15px 0 30px;">
+
+        <source src="/mj soft-connect/The_DARK_TRUTH_About_GOLD__Why_You_Keep_Getting_Stopped_Out(128k).m4a" type="audio/mpeg">
+
+      </audio>
+
+
+      <div style="margin-top:30px;">
+
+    </div>
+
+    <!-- Navigation Buttons -->
+
+    <div
+      style="display:flex;
+      justify-content:space-between;
+      margin-top:30px;
+      flex-wrap:wrap;
+      gap:15px;">
+    </div>
+
+  </div>
+</section>
+
 
 <!-- LOGIN PAGE -->
 
@@ -172,7 +257,7 @@
         </div>
         <div class="field-row">
           <div class="field"><label for="regPassword">Password</label><input type="password" id="regPassword"></div>
-          <div class="field"><label for="regConfirm">Confirm Password</label><input type="password" id=="regConfirm"></div>
+          <div class="field"><label for="regConfirm">Confirm Password</label><input type="password" id="regConfirm"></div>
         </div>
         <button type="button" id="registerSubmitBtn" class="btn btn-primary btn-block">Register</button>
         <p class="form-msg" id="regMsg"></p>
@@ -212,58 +297,10 @@
 
     <div id="dashLoggedIn" class="hide">
       <div class="dash-head">
-        <div>
-          <span class="eyebrow" id="dashGreeting">Welcome,</span>
-          <h1>Welcome, <span id="dashName" class="text-accent">Student</span></h1>
-        </div>
-        <div style="display:flex;align-items:center;gap:14px;">
-          <span class="role" id="dashEmail"></span>
-          <button class="btn btn-ghost" id="logoutBtn">Log Out</button>
-        </div>
-      </div>
-
-      <div class="dash-grid">
-        <div>
-          <div class="card" style="margin-bottom:24px;">
-            <h3 style="font-size:17px;margin-bottom:16px;">Profile Information</h3>
-            <div class="profile-grid">
-              <div><span class="ic">Email</span><p id="dashEmail2"></p></div>
-              <div><span class="ic">Phone</span><p id="dashPhone"></p></div>
-              <div><span class="ic">Address</span><p id="dashAddress"></p></div>
-              <div><span class="ic">Joined</span><p id="dashJoined"></p></div>
-            </div>
-          </div>
-
-          <div class="card" style="padding:0;overflow:hidden;">
-            <div style="padding:22px 22px 0;"><h3 style="font-size:17px;">My Registered Courses</h3></div>
-            <table>
-              <thead><tr><th>Course</th><th>Progress</th><th>Status</th></tr></thead>
-              <tbody id="dashCourseRows"></tbody>
-            </table>
-            <p id="dashCoursesEmpty" class="empty-state hide" style="margin:22px;">No course registered yet.</p>
-          </div>
-        </div>
-        <div>
-          <div class="side-card">
-            <h4>Dashboard Features</h4>
-            <div class="feat-list">
-              <button data-page="courses">View Registered Courses</button>
-              <button id="featProgress">Course Progress</button>
-              <button id="featMaterials">Learning Materials</button>
-              <button id="featCerts">Certificates</button>
-              <button id="featProfile">Profile Settings</button>
-              <button id="featNotif">Notifications</button>
-            </div>
-          </div>
-          <div class="side-card" id="notifBox">
-            <h4>Notifications</h4>
-            <p style="font-size:13.5px;color:var(--text-dim);">No new notifications. Keep learning!</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</section
+</section>
+
 <!-- ABOUT PAGE  -->
 
 <section class="page" id="page-about">
@@ -278,10 +315,7 @@
   </div>
 </section>
 
-
-
 <!-- CONTACT PAGE  -->
-
 
 <section class="page" id="page-contact">
   <div class="wrap contact-grid">
@@ -308,15 +342,21 @@
         <h4 style="font-family:var(--mono);font-size:12px;color:var(--text-dim);text-transform:uppercase;margin-top:10px;">Social Media</h4>
         <div class="social-row">
           <a href="https://www.facebook.com/profile.php?id=100090633200374" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="X / Twitter">X</a>
-          <a href="#" aria-label="LinkedIn">IN</a>
+          <a href="https://x.com/mujahid_karaye" aria-label="X / Twitter">X</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<!-- CERTIFICATE PAGE -->
+<section class="page" id="page-certificate">
+  <div class="wrap" style="padding:60px 20px;">
+    <h2 style="text-align: center;">MY FREECODECAMP CERTIFICATE</h2>
+    <div class="certificate-card">
+      <img src="Certificate.jpg" alt="Certificate">
+    </div>
+  </div>
+</section>
 
 <footer>&copy; 2026 MJ SOFT-CONNECT" Academy &mdash; Karaye Kano State, Nigeria</footer>
 
